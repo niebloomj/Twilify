@@ -15,7 +15,7 @@ function sendMsgToAdmin() {
 }
 
 $messages = $client->account->messages->getIterator(0, 50, array( 
-	'To' => "+15852095561",  
+	'To' => "+15852095561",
 )); 
  
 foreach ($messages as $message) { 
