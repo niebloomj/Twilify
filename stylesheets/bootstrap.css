@@ -166,7 +166,7 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: 0.0em 0.0em 0.0em;
 }
 legend {
   border: 0;
@@ -563,7 +563,7 @@ a.bg-danger:hover {
   background-color: #e4b9b9;
 }
 .page-header {
-  padding-bottom: 9px;
+  padding-bottom: 0px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
