@@ -19,8 +19,19 @@ var getSong = function(song, artist, limit) {
     var songartist = "https://api.spotify.com/v1/search?q=" + song + "%20" + artist + "&type=track&limit=" + limit;
     var data = httpGet(songartist);
     var dict = $.parseJSON(data);
-    console.log(dict);
     console.log(dict["tracks"]["items"][0]["uri"]);
+}
+
+
+var converturi= function(uri){
+  //spotify:track:3ZffCQKLFLUvYM59XKLbVm
+  var result = "spotify%3Atrack%3A";
+  var n = uri.search("k");
+  var concat = uri.substring(k+2, uri.length);
+  result = result.concat(concat);
+  console.log(result);
+
+
 }
 
 getSong("Wake me", "Green Day", 3);
