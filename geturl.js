@@ -20,7 +20,7 @@ var getSong = function(song, artist, limit) {
     var data = httpGet(songartist);
     var dict = $.parseJSON(data);
     console.log(dict);
-    console.log(dict["tracks"]["items"][0]["href"]);
+    console.log(dict["tracks"]["items"][0]["uri"]);
 }
 
 getSong("Wake me", "Green Day", 3);
