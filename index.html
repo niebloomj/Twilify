@@ -1,199 +1,187 @@
-<html class="full"><head>
+<html class="full">
+
+<head>
     <title>Twilify- Login and Register</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="keywords" content="Template, html, premium, themeforest">
     <meta name="description" content="Traveler - Premium template for travel companies">
     <meta name="author" content="Tsoy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- GOOGLE FONTS -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600" rel="stylesheet"
+    type="text/css">
     <!-- /GOOGLE FONTS -->
     <link rel="stylesheet" href="stylesheets/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/font-awesome.css">
     <link rel="stylesheet" href="stylesheets/icomoon.css">
-
-<!--     <link rel="stylesheet" href="css/styles.css">
- -->    
-<!--  <link rel="stylesheet" href="css/mystyles.css">
- -->    
+    <!--     <link rel="stylesheet" href="css/styles.css">
+ -->
+    <!--  <link rel="stylesheet" href="css/mystyles.css">
+ -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.rWWXUhKn2uI.O/m=client,signin/exm=auth/rt=j/sv=1/d=1/ed=1/am=MQ/rs=AGLTcCMRgIqiBmpDYI02sa7xYCYK3E4LWA/t=zcms/cb=gapi.loaded_1"
+    async=""></script>
+    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.rWWXUhKn2uI.O/m=auth/rt=j/sv=1/d=1/ed=1/am=MQ/rs=AGLTcCMRgIqiBmpDYI02sa7xYCYK3E4LWA/t=zcms/cb=gapi.loaded_0"
+    async=""></script>
+    <script src="js/main.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js" async="" defer="" gapi_processed="true"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async="" defer="" gapi_processed="true">
+    </script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/util.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/stats.js"></script>
+</head>
 
-
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="style/style.css">
-	<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.rWWXUhKn2uI.O/m=client,signin/exm=auth/rt=j/sv=1/d=1/ed=1/am=MQ/rs=AGLTcCMRgIqiBmpDYI02sa7xYCYK3E4LWA/t=zcms/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.rWWXUhKn2uI.O/m=auth/rt=j/sv=1/d=1/ed=1/am=MQ/rs=AGLTcCMRgIqiBmpDYI02sa7xYCYK3E4LWA/t=zcms/cb=gapi.loaded_0" async=""></script><script src="js/main.js"></script>
-	<script src="js/ajax.js"></script>
-<script src="https://apis.google.com/js/client:platform.js" async="" defer="" gapi_processed="true"></script>
-
-<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async="" defer="" gapi_processed="true">
-</script>
-
-
-
-
-<script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/stats.js"></script></head>
-
-<body bgcolor="#3090C7" >
-	<section class="page-header" width="100%" height="100%">
-    <script type="text/javascript">function signinCallback(authResult) {
-  if (authResult['status']['signed_in']) {
-    // Update the app to reflect a signed in user
-    // Hide the sign-in button now that the user is authorized, for example:
-    document.getElementById('signinButton').setAttribute('style', 'display: none');
-  } else {
-    // Update the app to reflect a signed out user
-    // Possible error values:
-    //   "user_signed_out" - User is signed-out
-    //   "access_denied" - User denied access to your app
-    //   "immediate_failed" - Could not automatically log in the user
-    console.log('Sign-in state: ' + authResult['error']);
-  }
-}</script>
-    <!-- /FACEBOOK WIDGET -->
-    <div class="global-wrap">
-
-        <div class="full-page">
-            <div class="bg-holder full">
-                <div class="bg-mask"></div>
-                <div class="bg-img" style="background-image:url(img/background-starrysky.jpg);"></div>
-                <div class="bg-holder-content full text-white">
-                    
-                    <div class="full-center">
-                        <div class="container">
-                            <div class="row row-wrap" data-gutter="60">
-                                <div class="col-md-4">
-                                    <div class="visible-lg">
-                                        
-                                        
+<body bgcolor="#3090C7">
+    <section class="page-header" width="100%" height="100%">
+        <script type="text/javascript">
+        function signinCallback(authResult) {
+            if (authResult['status']['signed_in']) {
+                // Update the app to reflect a signed in user
+                // Hide the sign-in button now that the user is authorized, for example:
+                document.getElementById('signinButton').setAttribute('style', 'display: none');
+            } else {
+                // Update the app to reflect a signed out user
+                // Possible error values:
+                //   "user_signed_out" - User is signed-out
+                //   "access_denied" - User denied access to your app
+                //   "immediate_failed" - Could not automatically log in the user
+                console.log('Sign-in state: ' + authResult['error']);
+            }
+        }
+        </script>
+        <!-- /FACEBOOK WIDGET -->
+        <div class="global-wrap">
+            <div class="full-page">
+                <div class="bg-holder full">
+                    <div class="bg-mask"></div>
+                    <div class="bg-img" style="background-image:url(img/background-starrysky.jpg);"></div>
+                    <div class="bg-holder-content full text-white">
+                        <div class="full-center">
+                            <div class="container">
+                                <div class="row row-wrap" data-gutter="60">
+                                    <div class="col-md-4">
+                                        <div class="visible-lg">
+                                        </div>
                                     </div>
-                                    
-                                </div>
+                                    <div class="global-wrap">
+                                        <div class="full-page">
+                                            <div class="bg-holder full">
+                                                <div class="bg-mask"></div>
+                                                <div class="bg-img" style="background-image:url(img/background-starrysky.jpg);"></div>
+                                                <div class="bg-holder-content full text-white">
+                                                    <div class="full-center">
+                                                        <div class="container">
+                                                            <div class="row row-wrap" data-gutter="60">
+                                                                <div class="col-md-4">
+                                                                    <h3 class="mb15">Login</h3>
+                                                                    <form id="loginform" onsubmit="return false;">
+                                                                        <div class="form-group form-group-ghost form-group-icon-left">
+                                                                            <label>Email</label>
+                                                                            <input type="text" id="email0" onfocus="emptyElement('status0')" maxlength="88" class="form-control"
+                                                                            placeholder="e.g. johndoe@gmail.com">
+                                                                        </div>
+                                                                        <div class="form-group form-group-ghost form-group-icon-left">
+                                                                            <label>Password</label>
+                                                                            <input type="password" id="password0" onfocus="emptyElement('status0')" maxlength="100" class="form-control"
+                                                                            placeholder="my secret password">
+                                                                        </div>
+                                                                        <input id="loginbtn" onclick="login()" class="btn btn-primary" type="submit" value="Sign in">
+                                                                        <span id="status0"></span>
+                                                                    </form>
+                                                                    <span id="signinButton">
+                                                                        <script src="https://apis.google.com/js/client:platform.js?onload=render" async="" defer="" gapi_processed="true">
+                                                                        /* Executed when the APIs finish loading */
+                                                                        function render() {
 
-                                 <div class="global-wrap">
+                                                                            // Additional params
+                                                                            var additionalParams = {
+                                                                                'theme': 'dark'
+                                                                            };
 
-        <div class="full-page">
-            <div class="bg-holder full">
-                <div class="bg-mask"></div>
-                <div class="bg-img" style="background-image:url(img/background-starrysky.jpg);"></div>
-                <div class="bg-holder-content full text-white">
-                    
-                    <div class="full-center">
-                        <div class="container">
-                            <div class="row row-wrap" data-gutter="60">
-                                <div class="col-md-4">
-                                    <h3 class="mb15">Login</h3>
-                                    <form id="loginform" onsubmit="return false;">
-                                        <div class="form-group form-group-ghost form-group-icon-left">
-                                            <label>Email</label>
-                                            <input type="text" id="email0" onfocus="emptyElement('status0')" maxlength="88" class="form-control" placeholder="e.g. johndoe@gmail.com">
-                                        </div>
-                                        <div class="form-group form-group-ghost form-group-icon-left">
-                                            <label>Password</label>
-                                            <input type="password" id="password0" onfocus="emptyElement('status0')" maxlength="100" class="form-control" placeholder="my secret password">
-                                        </div>
-                                        <input id="loginbtn" onclick="login()" class="btn btn-primary" type="submit" value="Sign in">
-                                        <span id="status0"></span>
-                                    </form>
-
-
-
-<span id="signinButton">
-  
-
-<script src="https://apis.google.com/js/client:platform.js?onload=render" async="" defer="" gapi_processed="true">
-/* Executed when the APIs finish loading */
-function render() {
-
-  // Additional params
-  var additionalParams = {
-    'theme' : 'dark'
-  };
-
-  gapi.signin.render('myButton', additionalParams);
-}
-
-
-
-
-</script>
-<!-- In the callback, you would hide the gSignInWrapper element on a
+                                                                            gapi.signin.render(
+                                                                                'myButton',
+                                                                                additionalParams
+                                                                            );
+                                                                        }
+                                                                        </script>
+                                                                        <!-- In the callback, you would hide the gSignInWrapper element on a
 successful sign in -->
-<div id="gSignInWrapper">
-  
-</div>
-
-                                
-                                <div class="col-md-12" float:left="">
-                                    
-                                    <form action="" method="POST" name="signupform" id="signupform" onsubmit="return false;">
-                                        <div class="form-group form-group-ghost form-group-icon-left">
+                                                                        <div id="gSignInWrapper">
+                                                                        </div>
+                                                                        <div class="col-md-12" float:left="">
+                                                                            <form action="" method="POST" name="signupform" id="signupform" onsubmit="return false;">
+                                                                                <div class="form-group form-group-ghost form-group-icon-left">
                                                                                     <label>Name</label>
-
-                                            <input id="username" type="text" onblur="checkusername()" onkeyup="restrict('username')" maxlength="16" class="form-control" placeholder="Enter your name ">
-                                            <span id="unamestatus"></span>
+                                                                                    <input id="username" type="text" onblur="checkusername()" onkeyup="restrict('username')" maxlength="16"
+                                                                                    class="form-control"
+                                                                                    placeholder="Enter your name ">
+                                                                                    <span id="unamestatus"></span>
+                                                                                </div>
+                                                                                <div class="form-group form-group-ghost form-group-icon-left">
+                                                                                    <label>Email</label>
+                                                                                    <input id="email" type="text" onblur="checkemail()" onkeyup="restrict('email')" maxlength="88" class="form-control"
+                                                                                    placeholder="e.g. johndoe@gmail.com">
+                                                                                    <span id="estatus"></span>
+                                                                                </div>
+                                                                                <div class="form-group form-group-ghost form-group-icon-left">
+                                                                                    <label>Password</label>
+                                                                                    <input id="pass1" type="password" onfocus="emptyElement('status')" maxlength="16" class="form-control">
+                                                                                </div>
+                                                                                <div class="form-group form-group-ghost form-group-icon-left">
+                                                                                    <label>Password Again</label>
+                                                                                    <input id="pass2" type="password" onfocus="emptyElement('status')" maxlength="16" class="form-control">
+                                                                                </div>
+                                                                                <input id="signupbtn" onclick="signup()" class="btn btn-primary" type="submit" value="Sign up for Twilify">
+                                                                                <span id="status"></span>
+                                                                            </form>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script src="js/jquery.js"></script>
+                                            <script src="js/bootstrap.js"></script>
+                                            <script src="js/slimmenu.js"></script>
+                                            <script src="js/bootstrap-datepicker.js"></script>
+                                            <script src="js/bootstrap-timepicker.js"></script>
+                                            <script src="js/nicescroll.js"></script>
+                                            <script src="js/dropit.js"></script>
+                                            <script src="js/ionrangeslider.js"></script>
+                                            <script src="js/icheck.js"></script>
+                                            <script src="js/fotorama.js"></script>
+                                            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+                                            <script src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/main.js"></script>
+                                            <script src="js/typeahead.js"></script>
+                                            <script src="js/card-payment.js"></script>
+                                            <script src="js/magnific.js"></script>
+                                            <script src="js/owl-carousel.js"></script>
+                                            <script src="js/fitvids.js"></script>
+                                            <script src="js/tweet.js"></script>
+                                            <script src="js/countdown.js"></script>
+                                            <script src="js/gridrotator.js"></script>
+                                            <script src="js/custom.js"></script>
                                         </div>
-                                        <div class="form-group form-group-ghost form-group-icon-left">
-                                                                           
-                                 
-                                            <label>Email</label>
-                                            <input id="email" type="text" onblur="checkemail()" onkeyup="restrict('email')" maxlength="88" class="form-control" placeholder="e.g. johndoe@gmail.com">
-                                            <span id="estatus"></span>
-                                        </div>
-                                        <div class="form-group form-group-ghost form-group-icon-left">
-                                            <label>Password</label>
-                                            <input id="pass1" type="password" onfocus="emptyElement('status')" maxlength="16" class="form-control">
-                                        </div>
-                                        <div class="form-group form-group-ghost form-group-icon-left">
-                                            <label>Password Again</label>
-                                            <input id="pass2" type="password" onfocus="emptyElement('status')" maxlength="16" class="form-control">
-                                        </div>
-						  
-                                            
-                                        <input id="signupbtn" onclick="signup()" class="btn btn-primary" type="submit" value="Sign up for Twilify">
-																				
-
-                                        <span id="status"></span>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
                 </div>
             </div>
         </div>
+        <iframe name="oauth2relay421269860" id="oauth2relay421269860" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=file%3A%2F%2F#rpctoken=609429801&amp;forcesecure=1"
+        tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+        </section</body>
 
-
-
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/slimmenu.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/bootstrap-timepicker.js"></script>
-        <script src="js/nicescroll.js"></script>
-        <script src="js/dropit.js"></script>
-        <script src="js/ionrangeslider.js"></script>
-        <script src="js/icheck.js"></script>
-        <script src="js/fotorama.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script><script src="https://maps.gstatic.com/maps-api-v3/api/js/20/8/main.js"></script>
-        <script src="js/typeahead.js"></script>
-        <script src="js/card-payment.js"></script>
-        <script src="js/magnific.js"></script>
-        <script src="js/owl-carousel.js"></script>
-        <script src="js/fitvids.js"></script>
-        <script src="js/tweet.js"></script>
-        <script src="js/countdown.js"></script>
-        <script src="js/gridrotator.js"></script>
-        <script src="js/custom.js"></script>
-    </div>
-
-
-
-</div></div></div></div></div></div></div></div><iframe name="oauth2relay421269860" id="oauth2relay421269860" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=file%3A%2F%2F#rpctoken=609429801&amp;forcesecure=1" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
-</section</body></html>
+</html>
