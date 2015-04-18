@@ -34,4 +34,6 @@ var converturi= function(uri){
 
 }
 
-getSong("Wake me", "Green Day", 3);
+
+
+converturi(getSong("Wake me", "Green Day", 3));
