@@ -9,7 +9,7 @@ function httpGet(theUrl) {
 
 
 function setCode(code){
-  document.getElementById("code").innerHTML = code;
+  document.getElementById("code").innerHTML = "Party Code: " +code;
 }
 
 
