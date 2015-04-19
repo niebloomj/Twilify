@@ -14,6 +14,7 @@
     <script src="js/array.js"></script>
     <script src="js/geturl.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <style>
     #sortable {
         list-style-type: none;
@@ -55,7 +56,7 @@
             <form>
                 <span>
                     <input class="search" type="text">
-                    <input class="search" type="button" value="Search">
+                    <a href="#" class="btn btn-lg btn-success">Search</a>
                 </span>
             </form>
         </div>
