@@ -13,7 +13,7 @@ function setCode(code){
 }
 
 
-function getSong(song, artist, limit) {
+function getSong(song,limit) {
     /*search through songs in spotify, store in array
     within the array search for artist*/
     //https://developer.spotify.com/web-api/get-track/
@@ -21,7 +21,7 @@ function getSong(song, artist, limit) {
     //type = track (default)
     //1st step - scan string, remove all special characters
 
-    var songartist = "https://api.spotify.com/v1/search?q=" + song + "%20" + artist + "&type=track&limit=" + limit;
+    var songartist = "https://api.spotify.com/v1/search?q=" + song +"&type=track&limit=" + limit;
     var data = httpGet(songartist);
     var dict = $.parseJSON(data);
         // console.log(data);
@@ -47,25 +47,24 @@ function converturi(uri){
   var concat = str.substring(n+2, str.length);
   result = result.concat(concat);
   console.log(result);
-  musiccue.push(result);
-  //setPlayer();
+  setPlayer(result);
 }
 
 function nextSong(){
-	document.getElementById("play").src=list[0].url;
-  list.shift();
+	//document.getElementById("play").src=list[0].url;
+  //list.shift();
   var listItems = $("#myList li");
-  listItems.each(function(li) {
-     this.remove();
-     break();
+  getSong(listItems[0].innerHTML,1);
+  listItems.first().remove();
+  musiccue.shift();
  }
+
+function setPlayer(result){
+  document.getElementById("play").src= result;
 }
-
-
 
 
 setCode(23687);
 
 
 
-getSong("Wake me", "Green Day", 3);
