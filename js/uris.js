@@ -59,7 +59,6 @@ function populate(){
         var l = $('#myList li');
 for ( var i=musiccue.length - 1,  len = l.length; i>len; i--) { 
         //define the listItem, i.e. a new list element
-        var l = $('#myList li');
 
       
       
