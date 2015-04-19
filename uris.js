@@ -19,8 +19,6 @@ for ( var i=0, len=uris.length; i<len; ++i) {
         $('#myList').append(listItem);
         //$('#myorder').listview('refresh');
         console.log("Well, it ran at least");
-        
-
 }
 }
 populate();
