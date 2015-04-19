@@ -14,17 +14,11 @@ function setCode(code){
 
 
 function getSong(song,limit) {
-    /*search through songs in spotify, store in array
-    within the array search for artist*/
-    //https://developer.spotify.com/web-api/get-track/
-    //q = query's keywords 
-    //type = track (default)
-    //1st step - scan string, remove all special characters
+   
 
     var songartist = "https://api.spotify.com/v1/search?q=" + song +"&type=track&limit=" + limit;
     var data = httpGet(songartist);
     var dict = $.parseJSON(data);
-        // console.log(data);
 
     console.log(dict["tracks"]["items"][0]["uri"]);
         var duration_ms = dict["tracks"]["items"][0]["duration_ms"];
@@ -37,7 +31,6 @@ function getSong(song,limit) {
 
 function fixList(){
         var listItems = $("#myList li");
-        console.log("hehe");
         console.log(listItems);
         for(var i = 0; i<listItems.length;i++){
         musiccue[i] = listItems[i].innerHTML;
@@ -58,6 +51,7 @@ function fixList(){
 
 
     function getMessages(){
+      console.log("hello");
         var messages = $("#textMessages li");
         for(var i = 0; i<messages.length;i++){
         var n = messages[i].innerHTML.search(" ");
@@ -81,7 +75,6 @@ function converturi(uri){
 }
 
 function nextSong(){
-	console.log("he");
   var listItems = $("#myList li");
   getSong(listItems[0].innerHTML,1);
   listItems.first().remove();

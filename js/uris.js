@@ -19,10 +19,10 @@ function createSong(trackname,list){
 	console.log(list);
 	return list;
 }
-createSong("wake me up", musiccue );
-createSong("shake you down", musiccue );
-createSong("sugar", musiccue );
-createSong("moves like jagger", musiccue );
+// createSong("wake me up", musiccue );
+// createSong("shake you down", musiccue );
+// createSong("sugar", musiccue );
+// createSong("moves like jagger", musiccue );
 
 function populate(){
 for ( var i=0, len=musiccue.length; i<len; ++i) { 
