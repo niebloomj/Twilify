@@ -8,6 +8,10 @@ function httpGet(theUrl) {
 }
 
 
+function setCode(code){
+  document.getElementById("code").innerHTML = code;
+}
+
 function getSong(song, artist, limit) {
     /*search through songs in spotify, store in array
     within the array search for artist*/
@@ -22,7 +26,7 @@ function getSong(song, artist, limit) {
         console.log(dict["tracks"]["items"][0]["uri"]);
 
     console.log(dict["tracks"]["items"][0]["uri"]);
-var uri = dict["tracks"]["items"][0]["uri"];
+    var uri = dict["tracks"]["items"][0]["uri"];
      converturi(uri);
 }
 
