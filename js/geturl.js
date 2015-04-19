@@ -1,4 +1,3 @@
-
 function httpGet(theUrl) {
     var xmlHttp = null;
 
@@ -32,6 +31,7 @@ function getSong(song, artist, limit) {
 
     var uri = dict["tracks"]["items"][0]["uri"];
      converturi(uri);
+     return uri;
 }
 
 
@@ -47,13 +47,14 @@ function converturi(uri){
   var concat = str.substring(n+2, str.length);
   result = result.concat(concat);
   console.log(result);
-  uris.push(result);
+  list.push(result);
   //setPlayer();
 }
 
-function setPlayer(){
-	document.getElementById("play").src=uris[0];
-  uris.shift();
+function nextSong(){
+	document.getElementById("play").src=list[0].url;
+  list.shift();
+
 }
 
 

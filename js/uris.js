@@ -1,4 +1,5 @@
 uris = [];
+list = [];
 uris.push("blah");
 uris.push("https://embed.spotify.com/?uri=spotify%3Atrack%3A2CJtimCSGAn8x6RE3irZFV");
 uris.push("https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt");
@@ -19,9 +20,8 @@ function createSong(trackname, url, list){
 	console.log(list);
 	return list;
 }
-var list = [];
 createSong("wake me up","https://embed.spotify.com/?uri=spotify%3Atrack%3A2CJtimCSGAn8x6RE3irZFV", list );
-createSong("shake you down","https://embed.spotify.com/?uri=spotify%3Atrack%3A2CJtimCSGAn8x6RE3irZFV", list );
+createSong("shake you down","https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt", list );
 createSong("sugar","https://embed.spotify.com/?uri=spotify%3Atrack%3A2CJtimCSGAn8x6RE3irZFV", list );
 createSong("moves like jagger","https://embed.spotify.com/?uri=spotify%3Atrack%3A2CJtimCSGAn8x6RE3irZFV", list );
 
