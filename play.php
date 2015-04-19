@@ -69,15 +69,7 @@
         <ul style="display: none" id="textMessages"></ul>
 
         <script>
-        function getMessages(){
-        var messages = $("#textMessages li");
-        for(var i = 0; i<messages.length;i++){
-        var n = messages[i].innerHTML.search(" ");
-        messages[i].innerHTML = messages[i].innerHTML.substring(n+1, messages[i].length);
-        musiccue[i] = messages[i].innerHTML;
-        console.log(musiccue[i]);
-        }
-        }
+        
         </script>
 
         <iframe id="play" src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
