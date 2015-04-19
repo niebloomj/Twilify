@@ -78,13 +78,14 @@
         console.log(musiccue[i]);
         }
         }
-        getMessages();
-        
-
         </script>
+
         <iframe id="play" src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
         <script src="js/uris.js"></script>
+                    <button onlick="nextSong()" id = "next" type = 'submit'>Click for Next Song</button>
+
         <script src="js/geturl.js"></script>
+
         <script>
         $(function() {
             $("#myList").sortable();
@@ -109,7 +110,6 @@
     fixList();
     } );
 
-        //scan through elements of my list, and set it equal to list..
   
 
     </script>
