@@ -39,12 +39,21 @@
 </head>
 
 <body>
+
   <section class="page-header">
+  <h2 id="code">Party Code</h2>
+     <h1 class="project-name">Twilify</h1>
+    <h2 class="project-tagline">Ask and you shall receive</h2>
+    <h3 class="project-tagline">Text: (585)-209-5561</h3>
+    <div>
+    </div>
     <div class="list">
       <ol id="myList">
       </ol>
     </div>
-    <h2 id="code">Party Code</h2>
+          <a href="#" id="song" onclick="nextSong()" class="btn btn-lg btn-success">Click for Next Song</a>
+
+
     <!-- <script>
     document.getElementById("code").innerHTML = Math.floor(Math.random() * 90000) + 10000;
     </script>-->
@@ -57,9 +66,7 @@
       </form>
     </div>
     <br/> -->
-    <h1 class="project-name">Twilify</h1>
-    <h2 class="project-tagline">Ask and you shall receive</h2>
-    <h3 class="project-tagline">Text: (585)-209-5561</h3>
+   
     <script>
     var auto_refresh = setInterval(
       (function() {
@@ -68,6 +75,7 @@
       }), 1000);
     </script>
     <ul style="display: none" id="textMessages"></ul>
+
     <iframe id="play" src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt" width="300"
     height="380" frameborder="0" allowtransparency="true"></iframe>
     <script src="js/uris.js"></script>
@@ -82,10 +90,15 @@
       nextSong();
     }, 4000);
     </script>
-    <div>
-      <a href="#" onclick="nextSong()" class="btn btn-lg btn-success">Click for Next Song</a>
-    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </section>
+
 </body>
 
 </html>
