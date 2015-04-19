@@ -28,7 +28,7 @@ function createSong(trackname,list){
 function getMessages(){
         var messages = $("#textMessages li");
         var j = 0;
-        for(var i = mlength; i<messages.length;i++){
+        for(var i = messages.length-1; i>=mlength;i--){
 
         var n = messages[i].innerHTML.search(" ");
         var x = messages[i].innerHTML;
@@ -37,10 +37,9 @@ function getMessages(){
 
         j++;
         }
-        console.log(musiccue);
         mlength=messages.length;
-
-                populate();
+populate();
+                console.log(musiccue[musiccue.length-1]);
 
         }
 
@@ -56,7 +55,7 @@ function getMessages(){
 
 function populate(){
         var l = $('#myList li');
-for ( var i=musiccue.length - 1,  len = l.length; i>len; i--) { 
+for ( var i=l.length,  len = musiccue.length; i<len; i++) { 
         //define the listItem, i.e. a new list element
 
       
