@@ -59,7 +59,7 @@ var didUpdate = false;
 function populate() {
     var myList = document.getElementById("myList");
     if (musiccue.length > currentListLength - rem) {
-        // currentListLength = 0
+        currentListLength = 0
         myList.innerHTML = '';
         for (var i = 0; i < musiccue.length; i++) {
             currentListLength++;
