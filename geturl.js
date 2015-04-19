@@ -58,10 +58,7 @@ function setPlayer(){
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/gh-pages
 setCode(23687);
 
 
