@@ -21,7 +21,7 @@ function getSong(song,limit) {
 
     var dict = $.parseJSON(data);
     if(dict["tracks"]["total"]==0){
-      nextSong();
+      // nextSong();
       return;
     }
 

@@ -1,5 +1,6 @@
 uris = [];
 musiccue = [];
+var mlength = 0;
 uris.push("blah");
 uris.push("https://embed.spotify.com/?uri=spotify%3Atrack%3A2CJtimCSGAn8x6RE3irZFV");
 uris.push("https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt");
@@ -27,17 +28,19 @@ function createSong(trackname,list){
 function getMessages(){
         var messages = $("#textMessages li");
         var j = 0;
-        for(var i = rem; i<messages.length;i++){
+        for(var i = messages.length; i>mlength;i--){
 
-        var n = messages[i].innerHTML.search(" ");
-        var x = messages[i].innerHTML;
+        var n = messages[i-1].innerHTML.search(" ");
+        var x = messages[i-1].innerHTML;
         // if(vsearch(musiccue, x)!=true){
 
-        musiccue[j] = messages[i].innerHTML.substring(n+1, messages[i].length);
+        musiccue[j] = messages[i-1].innerHTML.substring(n+1, messages[i-1].length);
         //musiccue[i] = messages[i].innerHTML;
 //}
         j++;
         }
+        mlength=messages.length;
+
                 populate();
 
         }
@@ -53,13 +56,8 @@ function getMessages(){
         }
 
 function populate(){
-         var ul = document.getElementById('myList');
-               if (ul) {
-              while (ul.firstChild) {
-                ul.removeChild(ul.firstChild);
-        }
-        }
-for ( var i=0,  len = musiccue.length; i<len; i++) { 
+        var l = $('#myList li');
+for ( var i=mlength,  len = l.length; i>len; i--) { 
         //define the listItem, i.e. a new list element
         var l = $('#myList li');
 
