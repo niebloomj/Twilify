@@ -47,7 +47,7 @@ function converturi(uri){
   var concat = str.substring(n+2, str.length);
   result = result.concat(concat);
   console.log(result);
-  list.push(result);
+  musiccue.push(result);
   //setPlayer();
 }
 

@@ -39,14 +39,11 @@
 <body>
     <section class="page-header">
         <div class="list">
-
             <ul id="myList">
                 
             </ul>
-
-
         </div>
-        <h2 id="code">Party Code: 234346</h2>
+        <h2 id="code"></h2>
         <div>
             <form>
                 <span>
@@ -55,16 +52,7 @@
                 </span>
             </form>
         </div>
-        <br/>
-        <ul>
-        <?php 
-        require('twilio/Services/Twilio.php');
-        $sid = "AC57903eef4f1064c36f05f84b2dcff21d";
-        $token = "c799f3bda46a6ab81188f3200f3d9827";
-        $client = new Services_Twilio($sid, $token);
-        foreach ($client->account->messages as $message) {
-        $firstWord = explode(" ", $message->body)[0];
-        if ($firstWord == "23687"){echo "<li>". $message->body . "</li>";}}?></ul>
+        <br />
         <iframe id="play" src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
         <script src="js/uris.js"></script>
         <script src="js/geturl.js"></script>
@@ -73,12 +61,10 @@
             $("#myList").sortable();
             $("#myList").disableSelection();
         });
+        var x = document.getElementById("li");
+        console.log(x);
 
-        //scan through elements of my list, and set it equal to list..
-        var y = document.getElementsByTagName("ul");
-        console.log(y);
-
- </script>
+        </script>
         <h1 class="project-name">Twilify</h1>
         <h2 class="project-tagline">Ask and you shall receive</h2>
         <h3 class="project-tagline">Text: (585)-209-5561</h3>
