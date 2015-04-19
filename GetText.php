@@ -7,6 +7,6 @@ foreach ($client->account->messages->getIterator(0, 50, array(
     'To' => '+15852095561',
 )) as $message) {
 $firstWord = explode(" ", $message->body)[0];
-if ($firstWord == "23687"){echo "<li>". $message->body . "</li>";}}
+if ($firstWord == "13687"){echo "<li>". $message->body . "</li>";}}
 
 ?>
