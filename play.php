@@ -85,7 +85,9 @@ for(var i = 0; i<listItems.length;i++){
     musiccue[i] = listItems[i].innerHTML;
 }
 ;
-
+    for (var i = 0; i<musiccue.length; i++){
+        console.log(musiccue[i]) ;   
+    }
 }
 $("#myList").on( "sortupdate", function( event, ui ) {
     console.log("hey");

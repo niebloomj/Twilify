@@ -54,7 +54,11 @@ function converturi(uri){
 function nextSong(){
 	document.getElementById("play").src=list[0].url;
   list.shift();
-
+  var listItems = $("#myList li");
+  listItems.each(function(li) {
+     this.remove();
+     break();
+ }
 }
 
 
