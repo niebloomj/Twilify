@@ -35,7 +35,25 @@ function getSong(song,limit) {
 }
 
 
+function fixList(){
+        var listItems = $("#myList li");
+        console.log("hehe");
+        console.log(listItems);
+        for(var i = 0; i<listItems.length;i++){
+        musiccue[i] = listItems[i].innerHTML;
+        }
+        ;
+        for (var i = 0; i<musiccue.length; i++){
+        console.log(musiccue[i]) ;   
+        }
+      }
 
+
+
+    $("#myList").on( "sortupdate", function( event, ui ) {
+    console.log("hey");
+    fixList();
+    } );
 
 function converturi(uri){
   //spotify:track:3ZffCQKLFLUvYM59XKLbVm
@@ -51,8 +69,7 @@ function converturi(uri){
 }
 
 function nextSong(){
-	//document.getElementById("play").src=list[0].url;
-  //list.shift();
+	console.log("he");
   var listItems = $("#myList li");
   getSong(listItems[0].innerHTML,1);
   listItems.first().remove();

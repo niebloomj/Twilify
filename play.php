@@ -81,10 +81,10 @@
         </script>
 
         <iframe id="play" src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-        <script src="js/uris.js"></script>
-                    <button onlick="nextSong()" id = "next" type = 'submit'>Click for Next Song</button>
+        <script  src="js/uris.js"></script>
 
         <script src="js/geturl.js"></script>
+
 
         <script>
         $(function() {
@@ -94,25 +94,11 @@
              
         });
 
-        function fixList(){
-        var listItems = $("#myList li");
-        console.log(listItems);
-        for(var i = 0; i<listItems.length;i++){
-        musiccue[i] = listItems[i].innerHTML;
-        }
-        ;
-        for (var i = 0; i<musiccue.length; i++){
-        console.log(musiccue[i]) ;   
-        }
-        }
-    $("#myList").on( "sortupdate", function( event, ui ) {
-    console.log("hey");
-    fixList();
-    } );
-
-  
-
+        
     </script>
+
+
+        <button onclick="nextSong()" id = "next" type = 'submit'>Click for Next Song</button>
         <h1 class="project-name">Twilify</h1>
         <h2 class="project-tagline">Ask and you shall receive</h2>
         <h3 class="project-tagline">Text: (585)-209-5561</h3>
