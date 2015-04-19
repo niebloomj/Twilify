@@ -19,15 +19,29 @@ var getSong = function(song, artist, limit) {
     var songartist = "https://api.spotify.com/v1/search?q=" + song + "%20" + artist + "&type=track&limit=" + limit;
     var data = httpGet(songartist);
     var dict = $.parseJSON(data);
+        console.log(dict["tracks"]["items"][0]["uri"]);
+
     console.log(dict["tracks"]["items"][0]["uri"]);
+var uri = dict["tracks"]["items"][0]["uri"];
+     var str = String(uri);
+  console.log(uri);
+  var myRegExp = "k";
+  var result = "spotify%3Atrack%3A";
+  var n = str.search(myRegExp);
+  var concat = str.substring(n+2, str.length);
+  result = result.concat(concat);
+  console.log(result);
 }
 
 
 var converturi= function(uri){
   //spotify:track:3ZffCQKLFLUvYM59XKLbVm
+  var str = String(uri);
+  console.log(uri);
+  var myRegExp = "k";
   var result = "spotify%3Atrack%3A";
-  var n = uri.search("k");
-  var concat = uri.substring(k+2, uri.length);
+  var n = str.search(myRegExp);
+  var concat = str.substring(n+2, str.length-1);
   result = result.concat(concat);
   console.log(result);
 
@@ -36,4 +50,4 @@ var converturi= function(uri){
 
 
 
-converturi(getSong("Wake me", "Green Day", 3));
+getSong("Wake me", "Green Day", 3);
