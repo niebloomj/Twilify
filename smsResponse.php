@@ -10,9 +10,16 @@
 
     if(!$name = $people[$_REQUEST['From']])
         $name = "Stranger";
+
+    $firstWord = explode(" ", $_REQUEST['Body'])[0];
+    if (is_numeric($firstWord)) {
+        $responseString = $firstWord . " request has been sent";
+    } else {
+        $responseString = "Please text your party code followed by your song request";
+    }
 ?>
 
 <Response>
-    <!-- <Message>Welcome <?php echo $name ?>.</Message> -->
-    <Message>Please text your party code followed by your song request.</Message>
+    <Message><?php echo $responseString ?>.</Message>
+    <!-- <Message>Please text your party code followed by your song request.</Message> -->
 </Response>
