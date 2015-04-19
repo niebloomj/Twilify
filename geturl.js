@@ -1,3 +1,4 @@
+
 function httpGet(theUrl) {
     var xmlHttp = null;
 
@@ -46,16 +47,21 @@ function converturi(uri){
   var concat = str.substring(n+2, str.length);
   result = result.concat(concat);
   console.log(result);
-  setPlayer(result);
+  uris.push(result);
+  //setPlayer();
 }
 
-function setPlayer(result){
-	document.getElementById("play").src=result;
+function setPlayer(){
+	document.getElementById("play").src=uris[0];
+  uris.shift();
 }
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/gh-pages
 setCode(23687);
 
 
