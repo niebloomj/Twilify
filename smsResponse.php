@@ -13,6 +13,6 @@
 ?>
 
 <Response>
-    <Message>Welcome <?php echo $name ?>.</Message>
-    <Message>Normal or Party mode? Reply "Normal" or "Party"</Message>
+    <!-- <Message>Welcome <?php echo $name ?>.</Message> -->
+    <Message>Please text your party code followed by your song request.</Message>
 </Response>
