@@ -1,0 +1,10 @@
+  .li{
+    color: 0000ff !important;
+  }
+  #floating{
+  	position: fixed !important;
+  	top: 10 !important;
+  	left: 10 !important;
+  	z-index: 10 !important;
+  }
+  
