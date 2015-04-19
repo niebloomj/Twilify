@@ -37,8 +37,9 @@ function getMessages(){
 
         j++;
         }
+        console.log(musiccue);
         mlength=messages.length;
-populate();
+                populate();
                 console.log(musiccue[musiccue.length-1]);
 
         }
