@@ -71,7 +71,7 @@ for ( var i=mlength,  len = l.length; i>len; i--) {
 }
 
         //$('#myorder').listview('refresh');
-        console.log("Well, it ran at least");
+        // console.log("Well, it ran at least");
 
 
 }
