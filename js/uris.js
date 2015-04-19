@@ -20,10 +20,16 @@ function createSong(trackname, list) {
         console.log(list);
         return list;
     }
-    // createSong("wake me up", musiccue );
-    // createSong("shake you down", musiccue );
-    // createSong("sugar", musiccue );
-    // createSong("moves like jagger", musiccue );
+
+// function getMessages(){
+//         var messages = $("#textMessages li");
+//         int j = 0;
+//         var j = 0;
+//         for(var i = rem; i<messages.length;i++){
+
+//         var n = messages[i].innerHTML.search(" ");
+// @@ -53,12 +53,12 @@ function getMessages(){
+//         }
 
 function getMessages() {
     var messages = $("#textMessages li");
@@ -55,14 +61,33 @@ function vsearch(array, value) {
     return bool;
 }
 
+
+
+// function populate(){
+//          var ul = document.getElementById('myList');
+//                if (ul) {
+//               while (ul.firstChild) {
+//                 ul.removeChild(ul.firstChild);
+//         }
+//         }
+//          var ul = document.getElementById('myList');
+//                if (ul) {
+//               while (ul.firstChild) {
+//                 ul.removeChild(ul.firstChild);
+//         }
+//         }
+// for ( var i=0,  len = musiccue.length; i<len; i++) { 
+//         //define the listItem, i.e. a new list element
+//         var l = $('#myList li');
+// }
+// }
+
+
 function populate() {
     var l = $('#myList li');
     for (var i = musiccue.length - 1, len = l.length; i > len; i--) {
         //define the listItem, i.e. a new list element
-        var l = $('#myList li');
-
-
-
+        // var l = $('#myList li');
         var listItem = document.createElement("li");
         listItem.setAttribute('class',"list-group-item");
         listItem.innerHTML = musiccue[i];
@@ -71,10 +96,6 @@ function populate() {
         $('#myList').append(listItem);
     }
 
-    //$('#myorder').listview('refresh');
-    // console.log("Well, it ran at least");
-
-
+   
 }
 
-// populate();
