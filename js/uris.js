@@ -30,18 +30,17 @@ function getMessages(){
 
         var n = messages[i].innerHTML.search(" ");
         var x = messages[i].innerHTML;
-        if(search(musiccue, x)!=true){
-                console.log("JKHJKH");
+        // if(vsearch(musiccue, x)!=true){
 
-        messages[i].innerHTML = messages[i].innerHTML.substring(n+1, messages[i].length);
-        musiccue[i] = messages[i].innerHTML;
-        console.log(musiccue[i]);
-        populate();
-}
+        musiccue[i] = messages[i].innerHTML.substring(n+1, messages[i].length);
+        //musiccue[i] = messages[i].innerHTML;
+//}
         }
+                populate();
+
         }
 
-        function search(array, value){
+        function vsearch(array, value){
                 var bool = false;
                 for(var a = 0; a<array.length;a++){
                         if(array[a]===value){
@@ -52,10 +51,18 @@ function getMessages(){
         }
 
 function populate(){
+          var ul = document.getElementById('myList');
+                if (ul) {
+                while (ul.firstChild) {
+                 ul.removeChild(ul.firstChild);
+        }
+        }
 for ( var i=0,  len = musiccue.length; i<len; i++) { 
         //define the listItem, i.e. a new list element
+        var l = $('#myList li');
 
-       
+      
+      
         var listItem = document.createElement("li");
         listItem.innerHTML = musiccue[i];
         
@@ -69,3 +76,4 @@ for ( var i=0,  len = musiccue.length; i<len; i++) {
 
 }
 
+// populate();
