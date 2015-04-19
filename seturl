@@ -1,0 +1,3 @@
+function setPlayer(url){
+	document.getElementById(play).src=url;
+}
