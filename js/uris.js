@@ -24,19 +24,48 @@ function createSong(trackname,list){
 // createSong("sugar", musiccue );
 // createSong("moves like jagger", musiccue );
 
+function getMessages(){
+        var messages = $("#textMessages li");
+        for(var i = 0; i<messages.length;i++){
+
+        var n = messages[i].innerHTML.search(" ");
+        var x = messages[i].innerHTML;
+        if(search(musiccue, x)!=true){
+                console.log("JKHJKH");
+
+        messages[i].innerHTML = messages[i].innerHTML.substring(n+1, messages[i].length);
+        musiccue[i] = messages[i].innerHTML;
+        console.log(musiccue[i]);
+        populate();
+}
+        }
+        }
+
+        function search(array, value){
+                var bool = false;
+                for(var a = 0; a<array.length;a++){
+                        if(array[a]===value){
+                                bool = true;
+                        }
+                }
+                return bool;
+        }
+
 function populate(){
-for ( var i=0, len=musiccue.length; i<len; ++i) { 
+for ( var i=0,  len = musiccue.length; i<len; i++) { 
         //define the listItem, i.e. a new list element
+
+       
         var listItem = document.createElement("li");
-        //listItem.setAttribute('id', i);
-        //create the inner HTML of the element
         listItem.innerHTML = musiccue[i];
+        
         //locate where the item is to be added in the DOM and add it so that it displays in the browser
         $('#myList').append(listItem);
+}
+
         //$('#myorder').listview('refresh');
         console.log("Well, it ran at least");
 
 
 }
-}
-populate();
+

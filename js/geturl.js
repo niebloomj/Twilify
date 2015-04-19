@@ -50,16 +50,7 @@ function fixList(){
 
 
 
-    function getMessages(){
-      console.log("hello");
-        var messages = $("#textMessages li");
-        for(var i = 0; i<messages.length;i++){
-        var n = messages[i].innerHTML.search(" ");
-        messages[i].innerHTML = messages[i].innerHTML.substring(n+1, messages[i].length);
-        musiccue[i] = messages[i].innerHTML;
-        console.log(musiccue[i]);
-        }
-        }
+    
 
 function converturi(uri){
   //spotify:track:3ZffCQKLFLUvYM59XKLbVm
@@ -82,6 +73,7 @@ function nextSong(){
  }
 
 function setPlayer(result){
+  console.log("hello");
   document.getElementById("play").src= result;
 }
 

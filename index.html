@@ -11,8 +11,12 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+       
+           <script src="js/geturl.js"></script>
+<script src="js/uris.js"></script>
+
+
   <script src="js/array.js"></script>
-  <script src="js/geturl.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
   <style>
   #sortable {
@@ -43,7 +47,7 @@
       <ul id="myList">
       </ul>
     </div>
-    <h2 id="code">Party Code</h2>
+    <h2 id= "code">Party Code</h2>
     <script>
     document.getElementById("code").innerHTML = Math.floor(Math.random() * 90000) + 10000;
     </script>
@@ -60,11 +64,11 @@
     var auto_refresh = setInterval(
       (function() {
         $("#textMessages").load("content.php");
+        getMessages();
       }), 1000);
     </script>
     <ul style="display: none" id="textMessages"></ul>
-    <script>
-    </script>
+   
     <iframe id="play" src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt" width="300"
     height="380" frameborder="0" allowtransparency="true"></iframe>
     <script src="js/uris.js"></script>
@@ -73,7 +77,6 @@
     $(function() {
       $("#myList").sortable();
       $("#myList").disableSelection();
-      var optionTexts = [];
 
     });
     </script>
