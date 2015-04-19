@@ -9,7 +9,7 @@ function httpGet(theUrl) {
 
 
 function setCode(code){
-  document.getElementById("code").innerHTML = "Party Code: " +code;
+  document.getElementById("code").innerHTML = code;
 }
 
 
@@ -26,6 +26,7 @@ function getSong(song,limit) {
     }
 
     console.log(dict["tracks"]["items"][0]["uri"]);
+        var duration_ms = dict["tracks"]["items"][0]["duration_ms"];
 
     var uri = dict["tracks"]["items"][0]["uri"];
      converturi(uri);
