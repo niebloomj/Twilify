@@ -64,7 +64,6 @@ for ( var i=mlength,  len = l.length; i>len; i--) {
       
       
         var listItem = document.createElement("li");
-        listItem.setAttribute('class',"list-group-item");
         listItem.innerHTML = musiccue[i];
         
         //locate where the item is to be added in the DOM and add it so that it displays in the browser
