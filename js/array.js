@@ -12,20 +12,17 @@ for ( var i=0, len=list.length; i<len; ++i) {
         
     }
 }
-
 function fixList(){
 var listItems = $("#myList li");
 var i = 0;
 listItems.each(function(li) {
-	console.log(musiccue[i]=($(this).text));
+	musiccue[i]=($(this).text);
 }
-
-	for (i = 0; i<musiccue.length; i++){
+);
+	for (i = 0; i<musiccue.len; i++){
 		console.log(musiccue[i]);	
 	}
 }
-$("#mylist").on( "sortover", function( event, ui ) {
+$("mylist").on( "sortover", function( event, ui ) {
 	fixList();
 } );
-
-fixList();
