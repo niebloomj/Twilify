@@ -72,11 +72,14 @@
         $(function() {
             $("#myList").sortable();
             $("#myList").disableSelection();
+                  var optionTexts = [];
+             $("ul li").each(function() { optionTexts.push($(this).text()) });
+            list = optionTexts;
+console.log(musiccue[1]);
         });
 
         //scan through elements of my list, and set it equal to list..
-        var y = document.getElementsByTagName("ul");
-        console.log(y);
+  
 
  </script>
         <h1 class="project-name">Twilify</h1>
