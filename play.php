@@ -34,9 +34,9 @@
         margin-left: -1.3em;
     }
     </style>
-</head>
+    </head>
 
-<body>
+    <body>
     <section class="page-header">
         <div class="list">
 
@@ -63,6 +63,20 @@
         }), 1000);
         </script>
         <div id="textMessages"></div>
+        <script>
+        function getMessages(){
+        var messages = $("#textMessages li");
+        for(var i = 0; i<messages.length;i++){
+        var n = messages[i].innerHTML.search(" ");
+        messages[i].innerHTML = messages[i].innerHTML.substring(n+1, messages[i].length);
+        musiccue[i] = messages[i].innerHTML;
+        console.log(musiccue[i]);
+        }
+        }
+        getMessages();
+        
+
+        </script>
         <iframe id="play" src="https://embed.spotify.com/?uri=spotify%3Atrack%3A4th1RQAelzqgY7wL53UGQt" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
         <script src="js/uris.js"></script>
         <script src="js/geturl.js"></script>
@@ -75,29 +89,25 @@
         });
 
         function fixList(){
-var listItems = $("#myList li");
-console.log(listItems);
-// listItems.each(function(index,li) {
-//     // console.log($(this).text);
-// }
-
-for(var i = 0; i<listItems.length;i++){
-    musiccue[i] = listItems[i].innerHTML;
-}
-;
-    for (var i = 0; i<musiccue.length; i++){
+        var listItems = $("#myList li");
+        console.log(listItems);
+        for(var i = 0; i<listItems.length;i++){
+        musiccue[i] = listItems[i].innerHTML;
+        }
+        ;
+        for (var i = 0; i<musiccue.length; i++){
         console.log(musiccue[i]) ;   
-    }
-}
-$("#myList").on( "sortupdate", function( event, ui ) {
+        }
+        }
+    $("#myList").on( "sortupdate", function( event, ui ) {
     console.log("hey");
     fixList();
-} );
+    } );
 
         //scan through elements of my list, and set it equal to list..
   
 
- </script>
+    </script>
         <h1 class="project-name">Twilify</h1>
         <h2 class="project-tagline">Ask and you shall receive</h2>
         <h3 class="project-tagline">Text: (585)-209-5561</h3>
