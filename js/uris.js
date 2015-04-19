@@ -26,7 +26,7 @@ function createSong(trackname,list){
 
 function getMessages(){
         var messages = $("#textMessages li");
-        int j = 0;
+        var j = 0;
         for(var i = rem; i<messages.length;i++){
 
         var n = messages[i].innerHTML.search(" ");
@@ -53,12 +53,12 @@ function getMessages(){
         }
 
 function populate(){
-        //  var ul = document.getElementById('myList');
-         //       if (ul) {
-        //  //      while (ul.firstChild) {
-         //        ul.removeChild(ul.firstChild);
-        //}
-        //}
+         var ul = document.getElementById('myList');
+               if (ul) {
+              while (ul.firstChild) {
+                ul.removeChild(ul.firstChild);
+        }
+        }
 for ( var i=0,  len = musiccue.length; i<len; i++) { 
         //define the listItem, i.e. a new list element
         var l = $('#myList li');

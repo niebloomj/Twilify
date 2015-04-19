@@ -14,11 +14,16 @@ function setCode(code){
 
 
 function getSong(song,limit) {
-   
+
 
     var songartist = "https://api.spotify.com/v1/search?q=" + song +"&type=track&limit=" + limit;
     var data = httpGet(songartist);
+
     var dict = $.parseJSON(data);
+    if(dict["tracks"]["total"]==0){
+      nextSong();
+      return;
+    }
 
     console.log(dict["tracks"]["items"][0]["uri"]);
         var duration_ms = dict["tracks"]["items"][0]["duration_ms"];
