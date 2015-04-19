@@ -8,7 +8,7 @@ function httpGet(theUrl) {
 }
 
 
-var getSong = function(song, artist, limit) {
+function getSong(song, artist, limit) {
     /*search through songs in spotify, store in array
     within the array search for artist*/
     //https://developer.spotify.com/web-api/get-track/
@@ -23,31 +23,25 @@ var getSong = function(song, artist, limit) {
 
     console.log(dict["tracks"]["items"][0]["uri"]);
 var uri = dict["tracks"]["items"][0]["uri"];
-     var str = String(uri);
-  console.log(uri);
-  var myRegExp = "k";
-  var result = "spotify%3Atrack%3A";
-  var n = str.search(myRegExp);
-  var concat = str.substring(n+2, str.length);
-  result = result.concat(concat);
-  console.log(result);
+     converturi(uri);
 }
 
 
-var converturi= function(uri){
+function converturi(uri){
   //spotify:track:3ZffCQKLFLUvYM59XKLbVm
   var str = String(uri);
   console.log(uri);
   var myRegExp = "k";
-  var result = "spotify%3Atrack%3A";
+  var result = "https://embed.spotify.com/?uri=spotify%3Atrack%3A";
   var n = str.search(myRegExp);
-  var concat = str.substring(n+2, str.length-1);
+  var concat = str.substring(n+2, str.length);
   result = result.concat(concat);
   console.log(result);
-
-
+  setPlayer(result);
 }
 
-
+function setPlayer(result){
+	document.getElementById("play").src=result;
+}
 
 getSong("Wake me", "Green Day", 3);
