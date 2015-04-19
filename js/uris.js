@@ -28,17 +28,16 @@ function createSong(trackname,list){
 function getMessages(){
         var messages = $("#textMessages li");
         var j = 0;
-        for(var i = messages.length; i>mlength;i--){
+        for(var i = mlength; i<messages.length;i++){
 
-        var n = messages[i-1].innerHTML.search(" ");
-        var x = messages[i-1].innerHTML;
-        // if(vsearch(musiccue, x)!=true){
+        var n = messages[i].innerHTML.search(" ");
+        var x = messages[i].innerHTML;
 
-        musiccue[j] = messages[i-1].innerHTML.substring(n+1, messages[i-1].length);
-        //musiccue[i] = messages[i].innerHTML;
-//}
+        musiccue[j] = messages[i].innerHTML.substring(n+1, messages[i].length);
+
         j++;
         }
+        console.log(musiccue);
         mlength=messages.length;
 
                 populate();
