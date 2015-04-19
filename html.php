@@ -13,7 +13,7 @@
     	// echo "From: {$message->from}\nBody: " . $message->body;
     	$firstWord = explode(" ", $message->body)[0];
     	if ($firstWord == "23687"){
-    		echo $message->body . "\n;";
+    		echo "<li>". $message->body . "</li>";
     	}
 	}
     ?>
