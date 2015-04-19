@@ -12,6 +12,7 @@ function setCode(code){
   document.getElementById("code").innerHTML = code;
 }
 
+
 function getSong(song, artist, limit) {
     /*search through songs in spotify, store in array
     within the array search for artist*/
@@ -47,5 +48,7 @@ function converturi(uri){
 function setPlayer(result){
 	document.getElementById("play").src=result;
 }
+
+setCode(23687);
 
 getSong("Wake me", "Green Day", 3);
