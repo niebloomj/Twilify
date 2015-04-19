@@ -24,12 +24,16 @@ function getSong(song, artist, limit) {
     var songartist = "https://api.spotify.com/v1/search?q=" + song + "%20" + artist + "&type=track&limit=" + limit;
     var data = httpGet(songartist);
     var dict = $.parseJSON(data);
-        console.log(dict["tracks"]["items"][0]["uri"]);
+        // console.log(data);
 
     console.log(dict["tracks"]["items"][0]["uri"]);
+        var duration_ms = dict["tracks"]["items"][0]["duration_ms"];
+
     var uri = dict["tracks"]["items"][0]["uri"];
      converturi(uri);
 }
+
+
 
 
 function converturi(uri){
@@ -49,6 +53,11 @@ function setPlayer(result){
 	document.getElementById("play").src=result;
 }
 
+
+
+
 setCode(23687);
+
+
 
 getSong("Wake me", "Green Day", 3);
