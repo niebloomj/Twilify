@@ -66,7 +66,7 @@
             $("#textMessages").load("content.php");
         }), 1000);
         </script>
-        <div id="textMessages" class="oools"></div>
+        <ul style="display: none" id="textMessages"></ul>
 
         <script>
         function getMessages(){
