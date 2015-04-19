@@ -24,5 +24,6 @@ listItems.each(function(li) {
 	}
 }
 $("#myList").on( "sortover", function( event, ui ) {
+	console.log("hey");
 	fixList();
 } );

@@ -71,10 +71,28 @@
             $("#myList").sortable();
             $("#myList").disableSelection();
                   var optionTexts = [];
-             $("ul li").each(function() { optionTexts.push($(this).text()) });
-            list = optionTexts;
-console.log(musiccue[1]);
+             
         });
+
+        function fixList(){
+var listItems = $("#myList li");
+console.log(listItems);
+// listItems.each(function(index,li) {
+//     // console.log($(this).text);
+// }
+
+for(var i = 0; i<listItems.length;i++){
+    musiccue[i] = $(listItems[i]).text;
+}
+;
+    for (var i = 0; i<musiccue.length; i++){
+        console.log(musiccue[i]) ;   
+    }
+}
+$("#myList").on( "sortupdate", function( event, ui ) {
+    console.log("hey");
+    fixList();
+} );
 
         //scan through elements of my list, and set it equal to list..
   
