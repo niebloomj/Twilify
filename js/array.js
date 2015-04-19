@@ -19,10 +19,10 @@ listItems.each(function(li) {
 	musiccue[i]=($(this).text);
 }
 );
-	for (i = 0; i<musiccue.len; i++){
+	for (i = 0; i<musiccue.length; i++){
 		console.log(musiccue[i]);	
 	}
 }
-$("mylist").on( "sortover", function( event, ui ) {
+$("#myList").on( "sortover", function( event, ui ) {
 	fixList();
 } );
