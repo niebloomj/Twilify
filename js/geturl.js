@@ -64,12 +64,13 @@ function converturi(uri){
   console.log(result);
   setPlayer(result);
 }
-
+var rem = 0;
 function nextSong(){
   var listItems = $("#myList li");
   getSong(listItems[0].innerHTML,1);
   listItems.first().remove();
   musiccue.shift();
+  rem++;
  }
 
 function setPlayer(result){
