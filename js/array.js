@@ -12,3 +12,17 @@ for ( var i=0, len=list.length; i<len; ++i) {
         
     }
 }
+function fixList(){
+var listItems = $("#myList li");
+var i = 0;
+listItems.each(function(li) {
+	list[i]=($(this).text);
+}
+);
+	for (i = 0; i<list.len; i++){
+		console.log(list[i]);	
+	}
+}
+$("mylist").on( "sortover", function( event, ui ) {
+	fixList();
+} );
