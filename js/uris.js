@@ -27,7 +27,6 @@ createSong("moves like jagger","https://embed.spotify.com/?uri=spotify%3Atrack%3
 
 function populate(){
 for ( var i=0, len=list.length; i<len; ++i) { 
-
         //define the listItem, i.e. a new list element
         var listItem = document.createElement("li");
         //listItem.setAttribute('id', i);
