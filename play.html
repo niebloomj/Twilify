@@ -9,17 +9,29 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>    
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>   
     <script src="js/array.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <style>
-  </style>
-
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #sortable li span { position: absolute; margin-left: -1.3em; }
+    </style>
+    <script>
+    $(function() {
+        $( "#myList" ).sortable();
+        $( "#myList" ).disableSelection();
+    });
+    </script>
 </head>
 
 <body>
     <section class="page-header">
         <div class="list">
        <ul id="myList">
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>test </li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>blah</li>
     </ul>
     </div>
         <h2 id="code">Party Code: 234346</h2>
