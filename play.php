@@ -47,6 +47,9 @@
 
         </div>
         <h2 id="code">Party Code</h2>
+        <script>
+             document.getElementById("code").innerHTML = Math.floor(Math.random()*90000) + 10000;
+        </script>
         <div>
             <form>
                 <span>
@@ -63,6 +66,7 @@
         }), 1000);
         </script>
         <div id="textMessages"></div>
+
         <script>
         function getMessages(){
         var messages = $("#textMessages li");
